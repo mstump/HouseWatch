@@ -4,9 +4,9 @@ import os
 from housewatch.clickhouse.queries.sql import EXISTING_TABLES_SQL
 
 ch_host = os.getenv("CLICKHOUSE_HOST", "localhost")
-ch_verify = os.getenv("CLICKHOUSE_VERIFY", "") in ("true", "")
+ch_verify = os.getenv("CLICKHOUSE_VERIFY", "true").lower() not in ("false", "0")
 ch_ca = os.getenv("CLICKHOUSE_CA", None)
-ch_secure = os.getenv("CLICKHOUSE_SECURE", "") in ("true", "")
+ch_secure = os.getenv("CLICKHOUSE_SECURE", "true").lower() not in ("false", "0")
 
 pool = ChPool(
     host=ch_host,
