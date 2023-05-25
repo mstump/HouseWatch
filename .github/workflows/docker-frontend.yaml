@@ -45,7 +45,8 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: frontend/
-          platforms: linux/amd64,linux/arm64
+          # TODO: arm64, but it keeps timing out
+          platforms: linux/amd64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
