@@ -4,3 +4,4 @@ node_modules
 housewatch.sqlite3
 .DS_Store
 yarn.lock
+.vscode

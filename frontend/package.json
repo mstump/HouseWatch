@@ -1,6 +1,9 @@
 {
     "name": "housewatch",
     "version": "1.0.0-beta",
+    "engines": {
+        "node": "16.x"
+    },
     "dependencies": {
         "@ant-design/charts": "^1.4.2",
         "@ant-design/icons": "^5.0.0",
